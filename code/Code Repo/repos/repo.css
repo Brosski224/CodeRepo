@@ -1,0 +1,198 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .left a {
+    color: #c9d1d9;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header .hamburger-menu {
+    position: relative;
+}
+
+header .hamburger-menu input {
+    display: none;
+}
+
+header .hamburger-menu label {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 22px;
+    position: relative;
+}
+
+header .hamburger-menu label span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #c9d1d9;
+    margin-bottom: 4px;
+    border-radius: 2px;
+}
+
+header .hamburger-menu label span:last-child {
+    margin-bottom: 0;
+}
+
+header .hamburger-menu ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #161b22;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+}
+
+header .hamburger-menu input:checked ~ ul {
+    display: block;
+}
+
+header .hamburger-menu ul li {
+    padding: 10px 0;
+}
+
+header .hamburger-menu ul li a {
+    color: #c9d1d9;
+    text-decoration: none;
+}
+
+.dashboard {
+    display: flex;
+    padding-top: 60px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content section {
+    margin-bottom: 20px;
+}
+
+.main-content .home h2 {
+    margin-top: 0;
+    font-size: 24px; 
+}
+
+.main-content .start-writing-code {
+    font-size: 14px; 
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.main-content .create-repo {
+    background-color: #161b22;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.create-repo #para {
+    color: #8d96a0;
+font-weight: normal;
+    
+}
+.create-repo p {
+    font-weight: bold;
+}
+
+.create-repo h2 {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="radio"],
+button {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #238636;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2ea043;
+}
+
+.right-sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #161b22;
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    right: 0;
+    top: 60px;
+}
+
+.right-sidebar h2 {
+    color: #c9d1d9;
+}
+
+.right-sidebar button {
+    background-color: #238636;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.right-sidebar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin-bottom: 10px;
+}
+
+.right-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.right-sidebar ul li {
+    padding: 5px 0;
+    cursor: pointer;
+}
