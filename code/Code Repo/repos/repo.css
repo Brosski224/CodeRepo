@@ -25,8 +25,12 @@ header .left a {
     margin-right: 20px;
 }
 
-header .hamburger-menu {
-    position: relative;
+.hamburger-menu {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 header .hamburger-menu input {
@@ -53,31 +57,42 @@ header .hamburger-menu label span {
 header .hamburger-menu label span:last-child {
     margin-bottom: 0;
 }
-
-header .hamburger-menu ul {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background-color: #161b22;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    border: 1px solid #30363d;
-    border-radius: 5px;
+.hamburger-menu:hover label span {
+    background: #666; /* Change color on hover */
 }
 
-header .hamburger-menu input:checked ~ ul {
+.hamburger-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px; /* Adjust distance from header */
+    right: 0;
+    background: #30363d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hamburger-menu:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hamburger-menu ul li {
+    padding: 10px 20px;
+}
+
+.hamburger-menu ul li a {
+    text-decoration: none;
+    color: #c9d1d9;
     display: block;
 }
 
-header .hamburger-menu ul li {
-    padding: 10px 0;
-}
-
-header .hamburger-menu ul li a {
-    color: #c9d1d9;
-    text-decoration: none;
+.hamburger-menu ul li a:hover {
+    background-color: #5f5656;
 }
 
 .dashboard {
@@ -113,7 +128,7 @@ header .hamburger-menu ul li a {
 
 .create-repo #para {
     color: #8d96a0;
-font-weight: normal;
+font-weight: ;
     
 }
 .create-repo p {
